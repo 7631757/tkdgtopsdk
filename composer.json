@@ -1,0 +1,21 @@
+{
+    "name": "7631757/tkdgtopsdk",
+    "description": "php7 topapi php sdk",
+    "type": "library",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tkdgtopsdk",
+            "email": "7631757@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Topsdk\\Topapi\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    }
+}
