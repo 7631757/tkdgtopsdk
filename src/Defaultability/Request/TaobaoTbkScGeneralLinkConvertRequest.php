@@ -80,6 +80,16 @@ class TaobaoTbkScGeneralLinkConvertRequest {
      **/
     private $specialId;
 
+    /**
+        加密用户标识
+     **/
+    private $uvid;
+
+    /**
+        启明系统任务ID
+     **/
+    private $qmtid;
+
 
     public function getBizSceneId() : string{
         return $this->bizSceneId;
@@ -201,6 +211,22 @@ class TaobaoTbkScGeneralLinkConvertRequest {
         $this->specialId = $specialId;
     }
 
+    public function getUvid() : string{
+        return $this->uvid;
+    }
+
+    public function setUvid(string $uvid){
+        $this->uvid = $uvid;
+    }
+
+    public function getQmtid() : string{
+        return $this->qmtid;
+    }
+
+    public function setQmtid(string $qmtid){
+        $this->qmtid = $qmtid;
+    }
+
 
     public function getApiName() : string {
         return "taobao.tbk.sc.general.link.convert";
@@ -266,6 +292,14 @@ class TaobaoTbkScGeneralLinkConvertRequest {
 
         if (!TopUtil::checkEmpty($this->specialId)) {
             $requestParam["special_id"] = TopUtil::convertBasic($this->specialId);
+        }
+
+        if (!TopUtil::checkEmpty($this->uvid)) {
+            $requestParam["uvid"] = TopUtil::convertBasic($this->uvid);
+        }
+
+        if (!TopUtil::checkEmpty($this->qmtid)) {
+            $requestParam["qmtid"] = TopUtil::convertBasic($this->qmtid);
         }
 
         return $requestParam;

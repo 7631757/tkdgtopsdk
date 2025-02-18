@@ -4,12 +4,12 @@ namespace Topsdk\Topapi\Ability2153\Domain;
 class TaobaoTbkScMaterialRecommendMorePromotionMapData {
 
     /**
-        预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等
+        优惠名称，如“商品券”、“跨店满减”、“单品直降”等
      **/
     public $promotion_title;
 
     /**
-        预热优惠利益点文案，如“1件7.92折”、“每200减20”等
+        优惠利益点文案，如“1件7.92折”、“每200减20”等
      **/
     public $promotion_desc;
 

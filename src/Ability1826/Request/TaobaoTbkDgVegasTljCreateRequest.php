@@ -74,6 +74,16 @@ class TaobaoTbkDgVegasTljCreateRequest {
      **/
     private $campaignType;
 
+    /**
+        淘礼金使用门槛，实付款大于等于门槛面额时才可使用此淘礼金；门槛值不能小于淘礼金面额
+     **/
+    private $useThreshold;
+
+    /**
+        淘礼金皮肤模版ID，1、日常模板（长期可用） 2、弹窗模板（长期可用） 3、新春模板（春节限定）
+     **/
+    private $awardImgTemplateId;
+
 
     public function getAdzoneId() : int{
         return $this->adzoneId;
@@ -187,6 +197,22 @@ class TaobaoTbkDgVegasTljCreateRequest {
         $this->campaignType = $campaignType;
     }
 
+    public function getUseThreshold() : string{
+        return $this->useThreshold;
+    }
+
+    public function setUseThreshold(string $useThreshold){
+        $this->useThreshold = $useThreshold;
+    }
+
+    public function getAwardImgTemplateId() : string{
+        return $this->awardImgTemplateId;
+    }
+
+    public function setAwardImgTemplateId(string $awardImgTemplateId){
+        $this->awardImgTemplateId = $awardImgTemplateId;
+    }
+
 
     public function getApiName() : string {
         return "taobao.tbk.dg.vegas.tlj.create";
@@ -248,6 +274,14 @@ class TaobaoTbkDgVegasTljCreateRequest {
 
         if (!TopUtil::checkEmpty($this->campaignType)) {
             $requestParam["campaign_type"] = TopUtil::convertBasic($this->campaignType);
+        }
+
+        if (!TopUtil::checkEmpty($this->useThreshold)) {
+            $requestParam["use_threshold"] = TopUtil::convertBasic($this->useThreshold);
+        }
+
+        if (!TopUtil::checkEmpty($this->awardImgTemplateId)) {
+            $requestParam["award_img_template_id"] = TopUtil::convertBasic($this->awardImgTemplateId);
         }
 
         return $requestParam;

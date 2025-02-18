@@ -48,6 +48,21 @@ class TaobaoTbkScMaterialRecommendPublishInfo {
      **/
     public $cpa_reward_amount;
 
+    /**
+        商品是否包含定向计划
+     **/
+    public $include_dxjh;
+
+    /**
+        两小时推广销量。 非实时，约半小时更新
+     **/
+    public $two_hour_promotion_sales;
+
+    /**
+        当天推广销量。 非实时，约1小时更新
+     **/
+    public $daily_promotion_sales;
+
 
     public function getIncomeRate() : string{
         return $this->income_rate;
@@ -119,6 +134,30 @@ class TaobaoTbkScMaterialRecommendPublishInfo {
 
     public function setCpaRewardAmount(string $cpaRewardAmount){
         $this->cpa_reward_amount = $cpaRewardAmount;
+    }
+
+    public function getIncludeDxjh() : string{
+        return $this->include_dxjh;
+    }
+
+    public function setIncludeDxjh(string $includeDxjh){
+        $this->include_dxjh = $includeDxjh;
+    }
+
+    public function getTwoHourPromotionSales() : int{
+        return $this->two_hour_promotion_sales;
+    }
+
+    public function setTwoHourPromotionSales(int $twoHourPromotionSales){
+        $this->two_hour_promotion_sales = $twoHourPromotionSales;
+    }
+
+    public function getDailyPromotionSales() : int{
+        return $this->daily_promotion_sales;
+    }
+
+    public function setDailyPromotionSales(int $dailyPromotionSales){
+        $this->daily_promotion_sales = $dailyPromotionSales;
     }
 
 

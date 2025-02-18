@@ -38,6 +38,11 @@ class TaobaoTbkScGeneralLinkConvertItemUrlList {
      **/
     public $extra_info;
 
+    /**
+        多件价券信息
+     **/
+    public $multiple_items_coupon_info_list;
+
 
     public function getMsg() : string{
         return $this->msg;
@@ -93,6 +98,14 @@ class TaobaoTbkScGeneralLinkConvertItemUrlList {
 
     public function setExtraInfo(string $extraInfo){
         $this->extra_info = $extraInfo;
+    }
+
+    public function getMultipleItemsCouponInfoList() : array{
+        return $this->multiple_items_coupon_info_list;
+    }
+
+    public function setMultipleItemsCouponInfoList(array $multipleItemsCouponInfoList){
+        $this->multiple_items_coupon_info_list = $multipleItemsCouponInfoList;
     }
 
 

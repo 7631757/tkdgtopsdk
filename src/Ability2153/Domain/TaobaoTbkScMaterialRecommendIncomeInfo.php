@@ -28,6 +28,11 @@ class TaobaoTbkScMaterialRecommendIncomeInfo {
      **/
     public $subsidy_upper_limit;
 
+    /**
+        补贴类型
+     **/
+    public $subsidy_type;
+
 
     public function getCommissionRate() : string{
         return $this->commission_rate;
@@ -67,6 +72,14 @@ class TaobaoTbkScMaterialRecommendIncomeInfo {
 
     public function setSubsidyUpperLimit(string $subsidyUpperLimit){
         $this->subsidy_upper_limit = $subsidyUpperLimit;
+    }
+
+    public function getSubsidyType() : string{
+        return $this->subsidy_type;
+    }
+
+    public function setSubsidyType(string $subsidyType){
+        $this->subsidy_type = $subsidyType;
     }
 
 

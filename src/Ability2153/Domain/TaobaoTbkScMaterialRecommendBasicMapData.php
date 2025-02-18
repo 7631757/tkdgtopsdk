@@ -78,6 +78,16 @@ class TaobaoTbkScMaterialRecommendBasicMapData {
      **/
     public $annual_vol;
 
+    /**
+        商品信息-商品小图列表
+     **/
+    public $small_images;
+
+    /**
+        商品邮费
+     **/
+    public $real_post_fee;
+
 
     public function getTitle() : string{
         return $this->title;
@@ -197,6 +207,22 @@ class TaobaoTbkScMaterialRecommendBasicMapData {
 
     public function setAnnualVol(string $annualVol){
         $this->annual_vol = $annualVol;
+    }
+
+    public function getSmallImages() : array{
+        return $this->small_images;
+    }
+
+    public function setSmallImages(array $smallImages){
+        $this->small_images = $smallImages;
+    }
+
+    public function getRealPostFee() : string{
+        return $this->real_post_fee;
+    }
+
+    public function setRealPostFee(string $realPostFee){
+        $this->real_post_fee = $realPostFee;
     }
 
 

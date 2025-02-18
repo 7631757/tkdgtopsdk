@@ -93,6 +93,11 @@ class TaobaoTbkScMaterialOptionalUpgradeBasicMapData {
      **/
     public $annual_vol;
 
+    /**
+        商品邮费
+     **/
+    public $real_post_fee;
+
 
     public function getTitle() : string{
         return $this->title;
@@ -236,6 +241,14 @@ class TaobaoTbkScMaterialOptionalUpgradeBasicMapData {
 
     public function setAnnualVol(string $annualVol){
         $this->annual_vol = $annualVol;
+    }
+
+    public function getRealPostFee() : string{
+        return $this->real_post_fee;
+    }
+
+    public function setRealPostFee(string $realPostFee){
+        $this->real_post_fee = $realPostFee;
     }
 
 

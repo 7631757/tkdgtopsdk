@@ -99,7 +99,7 @@ class TaobaoTbkScOrderDetailsGetPublisherOrderDto {
     public $pub_share_pre_fee;
 
     /**
-        付款金额。解释：买家拍下并付款金额（不包含运费金额、不包含未支付尾款的预售订单金额）；当预售订单完尾款支付后，付款金额会自动更新为订单总金额
+        付款金额。解释：买家拍下并付款金额（含预售订单定金金额，但不包含运费金额）；当预售订单完成尾款支付后，付款金额会自动更新为订单总金额
      **/
     public $alipay_total_price;
 
@@ -317,6 +317,11 @@ class TaobaoTbkScOrderDetailsGetPublisherOrderDto {
         平台专项服务费明细节点。解释：各项平台专项服务费类型的类型名称、扣费比率、扣费金额的详细说明
      **/
     public $platform_special_share_info_dto;
+
+    /**
+        加密标识（默认不开放）
+     **/
+    public $uvid;
 
 
     public function getTbPaidTime() : string{
@@ -821,6 +826,14 @@ class TaobaoTbkScOrderDetailsGetPublisherOrderDto {
 
     public function setPlatformSpecialShareInfoDto(TaobaoTbkScOrderDetailsGetPlatformSpecialShareInfoDTO $platformSpecialShareInfoDto){
         $this->platform_special_share_info_dto = $platformSpecialShareInfoDto;
+    }
+
+    public function getUvid() : string{
+        return $this->uvid;
+    }
+
+    public function setUvid(string $uvid){
+        $this->uvid = $uvid;
     }
 
 

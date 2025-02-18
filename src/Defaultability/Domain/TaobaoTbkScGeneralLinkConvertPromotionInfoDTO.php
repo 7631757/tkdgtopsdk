@@ -13,6 +13,11 @@ class TaobaoTbkScGeneralLinkConvertPromotionInfoDTO {
      **/
     public $commission_type;
 
+    /**
+        多件价需拍件数
+     **/
+    public $multiple_items_prices_count;
+
 
     public function getCommissionRate() : string{
         return $this->commission_rate;
@@ -28,6 +33,14 @@ class TaobaoTbkScGeneralLinkConvertPromotionInfoDTO {
 
     public function setCommissionType(string $commissionType){
         $this->commission_type = $commissionType;
+    }
+
+    public function getMultipleItemsPricesCount() : int{
+        return $this->multiple_items_prices_count;
+    }
+
+    public function setMultipleItemsPricesCount(int $multipleItemsPricesCount){
+        $this->multiple_items_prices_count = $multipleItemsPricesCount;
     }
 
 

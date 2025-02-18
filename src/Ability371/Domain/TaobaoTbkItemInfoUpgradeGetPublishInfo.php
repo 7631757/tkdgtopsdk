@@ -13,6 +13,21 @@ class TaobaoTbkItemInfoUpgradeGetPublishInfo {
      **/
     public $topn_info;
 
+    /**
+        单品淘礼金今日剩余可创建个数
+     **/
+    public $tlj_remain_num;
+
+    /**
+        两小时推广销量。 非实时，约半小时更新
+     **/
+    public $two_hour_promotion_sales;
+
+    /**
+        当天推广销量。 非实时，约1小时更新
+     **/
+    public $daily_promotion_sales;
+
 
     public function getIncomeRate() : string{
         return $this->income_rate;
@@ -28,6 +43,30 @@ class TaobaoTbkItemInfoUpgradeGetPublishInfo {
 
     public function setTopnInfo(TaobaoTbkItemInfoUpgradeGetTopNInfoDTO $topnInfo){
         $this->topn_info = $topnInfo;
+    }
+
+    public function getTljRemainNum() : int{
+        return $this->tlj_remain_num;
+    }
+
+    public function setTljRemainNum(int $tljRemainNum){
+        $this->tlj_remain_num = $tljRemainNum;
+    }
+
+    public function getTwoHourPromotionSales() : int{
+        return $this->two_hour_promotion_sales;
+    }
+
+    public function setTwoHourPromotionSales(int $twoHourPromotionSales){
+        $this->two_hour_promotion_sales = $twoHourPromotionSales;
+    }
+
+    public function getDailyPromotionSales() : int{
+        return $this->daily_promotion_sales;
+    }
+
+    public function setDailyPromotionSales(int $dailyPromotionSales){
+        $this->daily_promotion_sales = $dailyPromotionSales;
     }
 
 

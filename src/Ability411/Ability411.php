@@ -29,7 +29,7 @@ class Ability411 {
         return $this->client->executeWithSession("taobao.tbk.sc.relation.refund", $request->toMap(), $request->toFileParamMap(), $session);
     }
     /**
-        工具服务商member组查询、新增接口
+        淘宝客-服务商-member组查询&新增
     **/
     public function taobaoTbkScMembergroupOptional(TaobaoTbkScMembergroupOptionalRequest $request) {
         return $this->client->execute("taobao.tbk.sc.membergroup.optional", $request->toMap(), $request->toFileParamMap());

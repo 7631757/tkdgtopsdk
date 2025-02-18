@@ -20,6 +20,7 @@ use Topsdk\Topapi\Defaultability\Request\TaobaoTbkDgMaterialOptionalUpgradeReque
 use Topsdk\Topapi\Defaultability\Request\TaobaoTbkDgMaterialRecommendRequest;
 use Topsdk\Topapi\Defaultability\Request\TaobaoTbkDgTpwdRiskReportRequest;
 use Topsdk\Topapi\Defaultability\Request\TaobaoTbkOptimusTouMaterialIdsGetRequest;
+use Topsdk\Topapi\Defaultability\Request\TaobaoTbkScGeneralLinkParseRequest;
 use Topsdk\Topapi\Defaultability\Request\TmallProductAddSchemaGetRequest;
 use Topsdk\Topapi\Defaultability\Request\TmallProductMatchSchemaGetRequest;
 use Topsdk\Topapi\Defaultability\Request\TmallProductSchemaAddRequest;
@@ -43,6 +44,12 @@ class Defaultability {
     **/
     public function taobaoTbkScGeneralLinkConvert(TaobaoTbkScGeneralLinkConvertRequest $request,string $session) {
         return $this->client->executeWithSession("taobao.tbk.sc.general.link.convert", $request->toMap(), $request->toFileParamMap(), $session);
+    }
+    /**
+    淘宝客-服务商-万能解析
+     **/
+    public function taobaoTbkScGeneralLinkParse(TaobaoTbkScGeneralLinkParseRequest $request,string $session) {
+        return $this->client->executeWithSession("taobao.tbk.sc.general.link.parse", $request->toMap(), $request->toFileParamMap(), $session);
     }
     /**
         关键词过滤匹配

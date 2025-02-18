@@ -34,6 +34,11 @@ class TaobaoTbkItemInfoUpgradeGetRequest {
      **/
     private $manageItemPubId;
 
+    /**
+        是否获取单品淘礼金剩余数量，0-否，1-是，默认否(仅开通淘礼金权限媒体可查)
+     **/
+    private $getTljInfo;
+
 
     public function getItemId() : string{
         return $this->itemId;
@@ -83,6 +88,14 @@ class TaobaoTbkItemInfoUpgradeGetRequest {
         $this->manageItemPubId = $manageItemPubId;
     }
 
+    public function getGetTljInfo() : int{
+        return $this->getTljInfo;
+    }
+
+    public function setGetTljInfo(int $getTljInfo){
+        $this->getTljInfo = $getTljInfo;
+    }
+
 
     public function getApiName() : string {
         return "taobao.tbk.item.info.upgrade.get";
@@ -112,6 +125,10 @@ class TaobaoTbkItemInfoUpgradeGetRequest {
 
         if (!TopUtil::checkEmpty($this->manageItemPubId)) {
             $requestParam["manage_item_pub_id"] = TopUtil::convertBasic($this->manageItemPubId);
+        }
+
+        if (!TopUtil::checkEmpty($this->getTljInfo)) {
+            $requestParam["get_tlj_info"] = TopUtil::convertBasic($this->getTljInfo);
         }
 
         return $requestParam;

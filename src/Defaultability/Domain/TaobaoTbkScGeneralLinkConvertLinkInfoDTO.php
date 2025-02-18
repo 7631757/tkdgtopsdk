@@ -9,19 +9,9 @@ class TaobaoTbkScGeneralLinkConvertLinkInfoDTO {
     public $coupon_long_url;
 
     /**
-        1—单品 2—店铺 3—会场 4-承接开放 5-优惠券
+        1—单品 2—店铺 3—会场 4-承接开放 5-优惠券 6-直播间 7-淘积木页
      **/
     public $material_type;
-
-    /**
-        淘口令原始链接，入参物料不为淘口令时，此字段返回null
-     **/
-    public $tpwd_origin_url;
-
-    /**
-        物料ID，需根据material_type判断物料类型， 可能为商品ID、卖家ID、会场ID
-     **/
-    public $material_id;
 
     /**
         CPS链接长链
@@ -83,22 +73,6 @@ class TaobaoTbkScGeneralLinkConvertLinkInfoDTO {
 
     public function setMaterialType(int $materialType){
         $this->material_type = $materialType;
-    }
-
-    public function getTpwdOriginUrl() : string{
-        return $this->tpwd_origin_url;
-    }
-
-    public function setTpwdOriginUrl(string $tpwdOriginUrl){
-        $this->tpwd_origin_url = $tpwdOriginUrl;
-    }
-
-    public function getMaterialId() : string{
-        return $this->material_id;
-    }
-
-    public function setMaterialId(string $materialId){
-        $this->material_id = $materialId;
     }
 
     public function getCpsLongUrl() : string{

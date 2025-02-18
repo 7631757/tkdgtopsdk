@@ -50,7 +50,7 @@ class TaobaoTbkScMaterialOptionalUpgradeRequest {
     private $isTmall;
 
     /**
-        排序_des（降序），排序_asc（升序），销量（total_sales），淘客收入比率（tk_rate）， 累计推广量（tk_total_sales），总支出佣金（tk_total_commi），预估到价格（final_promotion_price），匹配分（match）
+        排序_des（降序），排序_asc（升序），销量（total_sales），淘客收入比率（tk_rate），营销计划佣金（tk_mkt_rate）， 累计推广量（tk_total_sales），总支出佣金（tk_total_commi），预估到价格（final_promotion_price），匹配分（match）
      **/
     private $sort;
 
@@ -65,7 +65,7 @@ class TaobaoTbkScMaterialOptionalUpgradeRequest {
     private $cat;
 
     /**
-        商品筛选-查询词；注意：使用标题精准搜索时，若无消费者比价场景ID2权限，当搜索结果只有一个商品时则出参不再提供商品推广链接和商品id字段，若搜索结果仍有多个商品，则正常出参。同时无消费者比价场景ID2权限，q参数也不再支持入参淘宝复制的商品链接进行搜索查询，仅支持入参含新商品id的淘宝客推广链接如uland链接进行搜索查询(场景id使用说明参考《淘宝客新商品ID升级》白皮书：https://www.yuque.com/taobaolianmengguanfangxiaoer/zmig94/tfyt0pahmlpzu2ud)
+        商品筛选-查询词；注意：q参数不支持入参淘宝联盟链接。若无消费者比价场景ID2权限，q参数也不支持入参淘宝复制的商品链接进行搜索查询；同时无消费者比价场景ID2权限使用标题精准搜索时，当搜索结果只有一个商品时则出参不再提供商品推广链接和商品id字段，若搜索结果仍有多个商品，则正常出参。(场景id使用说明参考《淘宝客新商品ID升级》白皮书：https://www.yuque.com/taobaolianmengguanfangxiaoer/zmig94/tfyt0pahmlpzu2ud)
      **/
     private $q;
 

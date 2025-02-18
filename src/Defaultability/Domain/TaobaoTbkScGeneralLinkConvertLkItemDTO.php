@@ -33,6 +33,11 @@ class TaobaoTbkScGeneralLinkConvertLkItemDTO {
      **/
     public $dx;
 
+    /**
+        商品库账号ID
+     **/
+    public $manage_pub_id;
+
 
     public function getItemId() : string{
         return $this->item_id;
@@ -80,6 +85,14 @@ class TaobaoTbkScGeneralLinkConvertLkItemDTO {
 
     public function setDx(string $dx){
         $this->dx = $dx;
+    }
+
+    public function getManagePubId() : int{
+        return $this->manage_pub_id;
+    }
+
+    public function setManagePubId(int $managePubId){
+        $this->manage_pub_id = $managePubId;
     }
 
 
